@@ -1,0 +1,159 @@
+<!Doctype>
+<html>
+<head>
+	<title>home</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="assets/css/style.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	
+</head>
+<body>
+    <div class="reg-form-bg" id="signup">
+        <div class="form-bg">
+            <form class="signupform-container" name="sform"  id="myform" autocomplete="off">
+				<div class="heading">
+				<h2>Registration Form</h2>
+				<ul>
+					<li><button type="button" class="red-theme-btn">One</button></li>
+					<li><button type="button" class="purple-theme-btn">Two</button></li>
+				</ul>
+			</div>
+				<div class="flname">
+					<div>
+					<label>First Name</label>
+					<input type="text"  class="chng-text" name="fstname" maxlength="16">
+					</div>
+					<div>
+				<label>Last Name</label>
+				<input type="text" name="lstname" class="chng-text" maxlength="16">
+				</div>
+				</div>
+					<label for="">Phone Number</label>
+					<input type="text" name="number" class="chng-text" maxlength="10">
+					<label for="">Email</label>
+					<input type="email" class="chng-text" name="email">
+					<label for="">About Me</label>
+					<textarea type="text" name="about" maxlength="100" class="chng-text"></textarea>
+					<label  class="container">By creating an account you agree to our 
+					Terms & Privacy
+					<input type="checkbox" class="checkmark" name="MyCheckbox">
+					</label>
+					<button type="button" class="submit-btn" id ="btnvalidate" onclick="signupvalidateform()">SignUp</button>
+			    
+			</form>
+		
+
+	<div class="tbform">
+		<h2>Registration Form Data</h2>
+		<table id="tblform">
+			<tr>
+			<th>First Name</th>
+			<th>Last Name</th> 
+			<th>Phone Number</th>
+			<th>Email Id</th>
+			<th>About Me</th> 
+						  
+			</tr>
+			<tr class="row-clr">
+			
+			</tr>
+		</table>
+	</div>
+</div>
+</div>
+
+<script>
+	function signupvalidateform() {
+			
+			var namf = document.forms["sform"]["fstname"].value;
+			var naml = document.forms["sform"]["lstname"].value;
+			var eml = document.forms["sform"]["email"].value;
+			var num = document.forms["sform"]["number"].value;
+			var abt = document.forms["sform"]["about"].value;
+			var atposition=eml.indexOf("@");  
+			var dotposition=eml.lastIndexOf("."); 
+
+			if ($("#tblform tbody").length == 0) {
+    		$("#tblform").append("<tbody></tbody>");
+  			}
+			  $("#tblform tbody").append(
+      			"<tr>" +
+        		"<td>" + namf + "</td>" +
+				
+        		"<td>" + naml + "</td>" +
+        		"<td>" + num + "</td>" +
+				"<td>" + eml + "</td>" +
+				"<td>" + abt + "</td>" +
+      		"</tr>"
+			 );
+			  			
+
+			if (namf == "" || namf.length<=1)                                  
+    		{ 
+        		window.alert("Please enter your First Name."); 
+        		fstname.focus(); 
+    		} 
+			if (naml == "" || naml.length<=1)                                  
+    		{ 
+        		window.alert("Please enter your Last Name."); 
+        		lstname.focus(); 
+    		} 
+			if (isNaN(num) || num.length<10) {
+				alert("Please enter a valid number");
+				number.focus(); 
+			}
+			if (atposition<1 || dotposition<atposition+2 || dotposition+2>=eml.length)
+			{  
+  			alert("Please enter a valid e-mail address");   
+  			}  
+			if (abt == "" || abt.length<10)                                  
+    		{ 
+        		window.alert("Please write minimum 20 characters."); 
+        		about.focus(); 
+				console(abt);
+    		} 
+
+			if (sform.MyCheckbox.checked == false) 
+    		{
+        		alert ('You didnot choose any of the checkboxes!');
+				MyCheckbox.focus(); 
+				console();
+    		} 
+			/*document.getElementById("ftname").innerHTML=namf;
+			document.getElementById("ltname").innerHTML=naml;
+			document.getElementById("phno").innerHTML=num;
+			document.getElementById("emailid").innerHTML=eml;
+			document.getElementById("abtm").innerHTML=abt;*/
+	}
+	
+		
+	$(document).ready(function(){
+  			$(".red-theme-btn").click(function(){
+   			 $("input , textarea ").toggleClass("stl");
+				$("th , td").toggleClass("tb-chng");
+				$("th").toggleClass("tb-bg-chng");
+				$("body").toggleClass("bg-chnge");
+				$("button").toggleClass("subt-chng");
+				$("h2").toggleClass("hd-clr-chng");
+				});
+
+			$(".purple-theme-btn").click(function(){
+   			 $("input , textarea ").toggleClass("stl-2");
+				$("th , td").toggleClass("tb-chng-2");
+				$("th").toggleClass("tb-bg-chng-2");
+				$("body").toggleClass("bg-chnge-2");
+				$("button").toggleClass("subt-chng-2");
+				$("h2").toggleClass("hd-clr-chng-2");
+				});
+
+				$(".submit-btn").click(function(){
+        		$("#myform").trigger("reset");
+    			});
+			});
+    
+	</script>
+
+</body>
+</html>

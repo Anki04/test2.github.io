@@ -1,0 +1,301 @@
+body {
+  background: url(../images/bg_img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.bg-chnge {
+  background: url(../images/bg_img_2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.bg-chnge-2 {
+  background: url(../images/bg_img_3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.reg-form-bg {
+  position: fixed;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.signupform-container {
+  width: 45%;
+  color: white;
+  padding: 0 2rem;
+}
+
+.signupform-container .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.signupform-container .heading ul {
+  list-style: none;
+}
+
+.signupform-container .heading ul li {
+  display: inline-block;
+}
+
+.signupform-container .heading ul .red-theme-btn {
+  background-color: #d30029;
+  color: White;
+  padding: 0.3rem 1.2rem;
+  border: none;
+  margin-top: 1.2rem;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  outline: none;
+  margin-left: 0.2rem;
+}
+
+.signupform-container .heading ul .purple-theme-btn {
+  background-color: #c200ff;
+  color: White;
+  padding: 0.3rem 1.2rem;
+  border: none;
+  margin-top: 1.2rem;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  outline: none;
+  margin-left: 0.2rem;
+}
+
+.signupform-container h2 {
+  font-size: 2rem;
+}
+
+.signupform-container label {
+  margin-bottom: 0.5rem;
+  display: block;
+  font-family: 18px "Roboto", sans-serif;
+}
+
+.signupform-container input {
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 40px;
+  border: 1px solid white;
+  padding: 0 20px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: block;
+  color: white;
+  font-family: 18px "Roboto", sans-serif;
+}
+
+.signupform-container input:focus {
+  border: 2px solid white;
+  display: block;
+  outline: none;
+}
+
+.signupform-container textarea {
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 6rem;
+  border: 1px solid white;
+  padding: 0.6rem 20px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: block;
+  color: white;
+  font-family: 18px "Roboto", sans-serif;
+}
+
+.signupform-container textarea:focus {
+  border: 2px solid white;
+  display: block;
+  outline: none;
+}
+
+.signupform-container .submit-btn {
+  background-color: white;
+  color: #3790e1;
+  padding: 0.8rem 2rem;
+  border: none;
+  width: 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 6rem;
+  text-align: center;
+  outline: none;
+}
+
+.signupform-container .submit-btn:hover {
+  background-color: #3790e1;
+  color: white;
+  outline: none;
+}
+
+.signupform-container .flname {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.signupform-container .flname label {
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.signupform-container .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+}
+
+.signupform-container .container .checkmark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 2px;
+  background-color: red;
+  border: 1px solid #ccc;
+}
+
+.signupform-container .container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.signupform-container .stl {
+  border: 1px solid #d30029;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.signupform-container .stl-2 {
+  border: 1px solid #e4a5f7;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.signupform-container .subt-chng {
+  color: #d30029;
+}
+
+.signupform-container .subt-chng:hover {
+  background-color: #d30029;
+}
+
+.signupform-container .subt-chng-2 {
+  color: #c200ff;
+}
+
+.signupform-container .subt-chng-2:hover {
+  background-color: #c200ff;
+}
+
+.tbform {
+  padding: 0 2rem;
+  height: 38rem;
+}
+
+table {
+  table-layout: fixed;
+  width: 32rem;
+}
+
+table, th, td {
+  border: 1px solid #024596;
+  border-collapse: collapse;
+  color: #282828;
+  word-wrap: break-word;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.2rem;
+}
+
+table, tr, th {
+  padding: 1rem;
+  background-color: #3790e1;
+  color: white;
+}
+
+.tbform {
+  background-color: white;
+}
+
+.tbform h2 {
+  font-size: 2rem;
+  color: #3790e1;
+}
+
+.tbform .hd-clr-chng {
+  color: #d30029;
+}
+
+.tbform .hd-clr-chng-2 {
+  color: #c200ff;
+}
+
+table tr:nth-child(even) {
+  background-color: #e5edf8;
+}
+
+table tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.tb-chng {
+  border: 1px solid red;
+}
+
+.tb-bg-chng {
+  background-color: #d30029;
+}
+
+.tb-chng-2 {
+  border: 1px solid #e4a5f7;
+}
+
+.tb-bg-chng-2 {
+  background-color: #c200ff;
+}
+/*# sourceMappingURL=style.css.map */
